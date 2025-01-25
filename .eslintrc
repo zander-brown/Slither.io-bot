@@ -1,28 +1,35 @@
 {
   "env": {
-    "browser" : true,
-    "es6" : true
+    "browser": true,
+    "es6": true
   },
   "extends": "eslint:recommended",
   "rules": {
-    "no-console": 0,
-    "indent" : [1, 4, {"SwitchCase" : 1}],
-    "max-len": [1, 100],
-    "space-before-function-paren": 1,
-    "linebreak-style" : [2, "unix"],
-    "brace-style": [1, "1tbs", {"allowSingleLine": true}],
-    "no-trailing-spaces": 1,
-    "space-before-blocks": 1,
-    "keyword-spacing": 1,
-    "space-infix-ops": 1,
-    "no-unneeded-ternary": 1,
-    "comma-spacing": 1,
-    "semi": 1
+    "no-console": "off",
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "max-len": ["error", { "code": 100 }],
+    "space-before-function-paren": ["error", "always"],
+    "linebreak-style": ["error", "unix"],
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "no-trailing-spaces": "error",
+    "space-before-blocks": "error",
+    "keyword-spacing": ["error", { "before": true, "after": true }],
+    "space-infix-ops": "error",
+    "no-unneeded-ternary": "error",
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "semi": ["error", "always"],
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "no-var": "error",
+    "prefer-const": "error",
+    "eqeqeq": ["error", "always"],
+    "no-unused-vars": ["error", { "args": "none" }],
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+    "eol-last": ["error", "always"]
   },
   "globals": {
-    "GM_info" : true,
-    "bot" : true,
-    "canvas" : true,
-    "userInterface" : true
+    "GM_info": "readonly",
+    "bot": "readonly",
+    "canvas": "readonly",
+    "userInterface": "readonly"
   }
 }
